@@ -1,0 +1,23 @@
+<div> <style>/* styles unrelated to zoom */
+            .zoom {
+                display:inline-block;
+                position: relative;
+            }
+            
+            /* magnifying glass icon */
+            .zoom:after {
+                content:'';
+                display:block; 
+                width:33px; 
+                height:33px; 
+                position:absolute; 
+                top:0;
+                right:0;
+                background:url(icon.png);
+            }
+            .zoom img {
+                display: block;
+            }
+            .zoom img::selection { background-color: transparent; }
+            #ex2 img:hover { cursor: url(grab.cur), default; }
+            #ex2 img:active { cursor: url(grabbed.cur), default; }</style> <span class="zoom" id="ex1" style="display: flex;align-items: center;justify-content: center"><img style="width:80%" ng-src="{{url}}"></span> </div>
